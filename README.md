@@ -4,7 +4,7 @@ Nutrikid-Pro
 
 Description: 
 -----------------------------------------------------------------------------------------------------------------------------
-Nutrikid Pro is a website/application that works with CHVs, nutritionists and doctors to help reduce the cases of malnutrition in the society in children below the gae of 5 years old
+Nutrikid Pro is a website/application that works with CHVs, nutritionists and doctors to help reduce the cases of malnutrition in the society in children below the gae of 5 years old. This will be done by, first, CHVs will create an account where they can log in and also log in details of a malnutritioned child accompanied with an image and a description of the child's signs and symptoms. Once this information has been uploaded, the doctors or nutritionists will also sign up and log into the website and take it to comment their reviews with interventions of how a child's concern can be handled. There will be excahnge of reviews and comments from both the doctors and the CHVs until the child is well and exited out of the program.
 
 Development language: 
 -----------------------------------------------------------------------------------------------------------------------------
