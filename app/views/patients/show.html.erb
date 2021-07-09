@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient name:</strong>
+  <%= @patient.patient_name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @patient.image.url, style:"width:400px;height:400px;" %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @patient.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @patient.category.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @patient.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

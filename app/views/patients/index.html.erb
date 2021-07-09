@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient name</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.patient_name %></td>
+        <td>
+        <% if patient.image_url %>
+          <%= image_tag patient.image_url, style:"width:100px;height:100px;" %>
+        <% end %></td>
+        <td><%= patient.description %></td>
+        <td><%= patient.category.name %></td>
+        <td><%= patient.user.email %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Patient', new_patient_path %>
