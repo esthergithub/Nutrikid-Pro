@@ -8,6 +8,8 @@ class PatientsController < ApplicationController
 
   # GET /patients/1 or /patients/1.json
   def show
+    @comments = @patient.comments
+    @comment = @patient.comments.build
   end
 
   # GET /patients/new
@@ -26,9 +28,11 @@ class PatientsController < ApplicationController
     respond_to do |format|
       if @patient.save
         format.html { redirect_to @patient, notice: "Patient was successfully created." }
+        format.js { render :index }
         format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new, status: :unprocessable_entity }
+        format.js { render :index }
         format.json { render json: @patient.errors, status: :unprocessable_entity }
       end
     end

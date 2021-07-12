@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :patients
+  resources :patients do
+    resources :comments
+  end
+
   devise_for :users
   resources :categories
   root to: "categories#index"

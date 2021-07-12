@@ -24,6 +24,13 @@
   <strong>User:</strong>
   <%= @patient.user.email %>
 </p>
-
+<p>List of Comments(Contents below are important)</p>
+  <!-- Get an HTML id of this comments_area and update only the part of that div -->
+  <div id="comments_area">
+    <!-- Render to display the posted comment list on the patients detail page -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, patient: @patient } %>
+  </div>
+  <!-- Render to display the comment field on the patients detail page -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, patient: @patient } %>
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

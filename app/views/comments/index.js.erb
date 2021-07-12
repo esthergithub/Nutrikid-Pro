@@ -1,0 +1,3 @@
+$("#comments_area").html("<%= j(render 'comments/index', { comments: @comment.patient.comments, patient: @comment.patient}) %>");
+$("textarea").val('');
+$("#notice").html("<%= j flash[:notice] %>");
