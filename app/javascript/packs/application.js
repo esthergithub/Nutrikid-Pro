@@ -18,6 +18,8 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+//= require ckeditor/init
+
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -27,3 +29,6 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")
