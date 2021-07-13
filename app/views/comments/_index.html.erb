@@ -1,16 +1,18 @@
 <ul>
   <% comments.each do |comment| %>
     <% if comment.id.present? %>
-      <li>
-        <div class="comment-content" id ="this_comment_<%= comment.id %>"></div>
-        <p><%= comment.content %></p>
-        <p><%= link_to "Edit comment", edit_patient_comment_path(patient, comment), remote: true %></p>
-        <!-- Addendum -->
-        <p><%= link_to "Delete comment", patient_comment_path(comment.patient_id, comment.id), method: :delete, remote: true,
-                                        data: { confirm: "Do you really want to delete this?"} %></p>
-        <!-- So far -->
-      </li>
+      <div id="comments_<%= comment.id %>" class="comments">
+      
+        <h6><u><%= comment.user.name %></u></h6>
+        <%= comment.content %>
+        <% if comment.user.email== current_user.email%>
+          <%= link_to 'Edit', edit_patient_comment_path(comment.patient, comment), class:'btn btn-primary btn-sm'%>
+          <%= link_to(patient_comment_path(@patient.id,comment.id), {method: :delete, remote: true, class:"btn btn-sm btn-danger delete-comment-button pull-right",value:'delete', params:{id: comment.id, patient: patient.id}} ) do%>
+            <i class="glyphicon glyphicon-trash">X</i>
+          <% end %>
+        <% end %>
+
+      </div>
     <% end %>
   <% end %>
 </ul>
-
