@@ -1,7 +1,5 @@
 RailsAdmin.config do |config|
 
-  require "nested_form/engine" require "nested_form/builder_mixin"
-
   ### Popular gems integration
 
   ## == Devise ==
@@ -40,4 +38,5 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  require "nested_form/engine" require "nested_form/builder_mixin"
 end
