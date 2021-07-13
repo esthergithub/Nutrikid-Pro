@@ -13,8 +13,8 @@ User.create(
   )
 
   Category.create([
-  { name: 'underwait' },
-  { name: 'overwait' },
-  { name: 'obesity'},
-  { name: 'nuetral'},
+  { name: 'wasting' },
+  { name: 'stunting' },
+  { name: 'underweight'},
+  { name: 'deficiencies in vitamins and minerals'},
   ])
