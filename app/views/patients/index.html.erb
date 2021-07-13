@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Patients</h1>
+
+<section class="wrapper">
+    <div class="container-fostrap">
+        <div>
+            <h1 class="heading">
+                Mulnitrition New Cases 
+            </h1>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                  <% @patients.each do |patient| %>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                           
+                          <% if patient.image_url %>
+                            <%= image_tag patient.image_url,class:"card" %>
+                          <% end %>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                <%= patient.category.name %>
+                                  </a>
+                                </h4>
+                                <p class="">
+                                <%= patient.description %>
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                              <%= link_to 'Read more', patient %>
+                            </div>
+                        </div>
+                    </div>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

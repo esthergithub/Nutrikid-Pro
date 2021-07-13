@@ -1,0 +1,45 @@
+<br><br><br>
+<div class="details">
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="true" href="#!">Active</a>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Back', patients_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+      <%= link_to 'Edit', edit_patient_path(@patient), class:"nav-link" %>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-12">
+      <%= image_tag @patient.image.url, class:"img-fluid" %>
+        
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= @patient.category.name %></h5>
+          <p class="card-text">
+            <%= @patient.description %>
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>List of Comments(Contents below are important)</p>
+<div id="comments_area">
+  <%= render partial: 'comments/index', locals: { comments: @comments, patient: @patient } %>
+</div>
+<%= render partial: 'comments/form', locals: { comment: @comment, patient: @patient } %>
+  </div>
+</div>
+
