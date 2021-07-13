@@ -1,0 +1,89 @@
+<header>
+<!-- Intro settings -->
+<style>
+  /* Default height for small devices */
+  #intro-example {
+    height: 400px;
+  }
+
+  /* Height for devices larger than 992px */
+  @media (min-width: 992px) {
+    #intro-example {
+      height: 600px;
+    }
+  }
+</style>
+
+<!-- Navbar -->
+
+<!-- Navbar -->
+
+<!-- Background image -->
+<div
+  id="intro-example"
+  class="p-5 text-center bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');"
+>
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+        <h5 class="mb-4">Best & free guide of responsive web design</h5>
+        <a
+          class="btn btn-outline-light btn-lg m-2"
+          href="https://www.youtube.com/watch?v=c9B4TPnak1A"
+          role="button"
+          rel="nofollow"
+          target="_blank"
+          >Start tutorial</a
+        >
+        <a
+          class="btn btn-outline-light btn-lg m-2"
+          href="https://mdbootstrap.com/docs/standard/"
+          target="_blank"
+          role="button"
+          >Download MDB UI KIT</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+</header>
+<section class="wrapper">
+    <div class="container-fostrap">
+        <div>
+            <h1 class="heading">
+                Mulnitrition New Cases 
+            </h1>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                  <% @patients.each do |patient| %>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                           
+                          <% if patient.image_url %>
+                            <%= image_tag patient.image_url,class:"card" %>
+                          <% end %>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                <%= patient.category.name %>
+                                  </a>
+                                </h4>
+                                <p class="">
+                                <%= patient.description %>
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                              <%= link_to 'Read more', patient %>
+                            </div>
+                        </div>
+                    </div>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'homes/index'
   resources :patients do
     resources :comments
   end
 
   devise_for :users
   resources :categories
-  root to: "categories#index"
+  root to: "homes#index"
 
   mount Ckeditor::Engine => '/ckeditor'
 
