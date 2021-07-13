@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_patient, only: [:create, :edit, :update]
   def create
     @comment = @patient.comments.build(comment_params)
