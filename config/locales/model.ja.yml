@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      patient: 患者
+      user: ユーザー
+    attributes:
+      patient:
+        patient_name: 名前
+        description: 説明
+      user:
+        user_role: 役割
+        name: 名前
+        email: メールアドレス
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶

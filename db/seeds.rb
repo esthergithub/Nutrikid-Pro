@@ -18,3 +18,12 @@ User.create(
   { name: 'underweight'},
   { name: 'deficiencies in vitamins and minerals'},
   ])
+
+  20.times do |t|
+    User.create! :email => "itsme#{t}@gmail.com", :password => "mysecret#{t}", :password_confirmation => "mysecret#{t}"
+end
+
+30.times do |t|
+  Patient.create! :patient_name => "patrick", :description => "mysecret#{t}" , :category_id => "1", :user_id => "1"
+end
+
