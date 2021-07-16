@@ -1,24 +1,24 @@
-example_id                          | status | run_time              |
------------------------------------ | ------ | --------------------- |
-./spec/models/patient_spec.rb[1:1]  | passed | 0.00989 seconds       |
-./spec/models/patient_spec.rb[1:2]  | passed | 0.00357 seconds       |
-./spec/models/patient_spec.rb[1:3]  | passed | 0.00375 seconds       |
-./spec/system/category_spec.rb[1:1] | passed | 0.17511 seconds       |
-./spec/system/category_spec.rb[1:2] | passed | 0.07755 seconds       |
-./spec/system/category_spec.rb[1:3] | passed | 0.07435 seconds       |
-./spec/system/category_spec.rb[1:4] | passed | 0.10395 seconds       |
-./spec/system/category_spec.rb[1:5] | passed | 0.10834 seconds       |
-./spec/system/comment_spec.rb[1:1]  | passed | 0.13817 seconds       |
-./spec/system/comment_spec.rb[1:2]  | passed | 0.17896 seconds       |
-./spec/system/comment_spec.rb[1:3]  | passed | 0.17154 seconds       |
-./spec/system/comment_spec.rb[1:4]  | passed | 0.22984 seconds       |
-./spec/system/comment_spec.rb[1:5]  | passed | 1 minute 0.44 seconds |
-./spec/system/patient_spec.rb[1:1]  | passed | 0.17535 seconds       |
-./spec/system/patient_spec.rb[1:2]  | passed | 0.16866 seconds       |
-./spec/system/patient_spec.rb[1:3]  | passed | 0.09583 seconds       |
-./spec/system/patient_spec.rb[1:4]  | passed | 0.27668 seconds       |
-./spec/system/patient_spec.rb[1:5]  | passed | 0.20331 seconds       |
-./spec/system/patient_spec.rb[1:6]  | passed | 0.23643 seconds       |
-./spec/system/user_spec.rb[1:1:1:1] | passed | 55.92 seconds         |
-./spec/system/user_spec.rb[1:2:1:1] | passed | 3.57 seconds          |
-./spec/system/user_spec.rb[1:2:2:1] | passed | 4.34 seconds          |
+example_id                          | status | run_time        |
+----------------------------------- | ------ | --------------- |
+./spec/models/patient_spec.rb[1:1]  | passed | 0.00197 seconds |
+./spec/models/patient_spec.rb[1:2]  | passed | 0.06339 seconds |
+./spec/models/patient_spec.rb[1:3]  | passed | 0.00172 seconds |
+./spec/system/category_spec.rb[1:1] | failed | 0.02523 seconds |
+./spec/system/category_spec.rb[1:2] | failed | 0.02514 seconds |
+./spec/system/category_spec.rb[1:3] | failed | 0.0211 seconds  |
+./spec/system/category_spec.rb[1:4] | failed | 0.2849 seconds  |
+./spec/system/category_spec.rb[1:5] | failed | 0.01963 seconds |
+./spec/system/comment_spec.rb[1:1]  | failed | 0.02308 seconds |
+./spec/system/comment_spec.rb[1:2]  | failed | 0.01944 seconds |
+./spec/system/comment_spec.rb[1:3]  | failed | 0.01948 seconds |
+./spec/system/comment_spec.rb[1:4]  | failed | 0.02411 seconds |
+./spec/system/comment_spec.rb[1:5]  | failed | 0.0194 seconds  |
+./spec/system/patient_spec.rb[1:1]  | failed | 0.0197 seconds  |
+./spec/system/patient_spec.rb[1:2]  | failed | 0.01919 seconds |
+./spec/system/patient_spec.rb[1:3]  | failed | 0.02107 seconds |
+./spec/system/patient_spec.rb[1:4]  | failed | 0.02115 seconds |
+./spec/system/patient_spec.rb[1:5]  | failed | 0.03511 seconds |
+./spec/system/patient_spec.rb[1:6]  | failed | 0.02381 seconds |
+./spec/system/user_spec.rb[1:1:1:1] | failed | 19.57 seconds   |
+./spec/system/user_spec.rb[1:2:1:1] | failed | 0.64031 seconds |
+./spec/system/user_spec.rb[1:2:2:1] | failed | 0.77564 seconds |
