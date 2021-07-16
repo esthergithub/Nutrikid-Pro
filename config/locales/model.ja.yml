@@ -3,10 +3,15 @@ ja:
     models:
       patient: 患者
       user: ユーザー
+      category: カテゴリー
+      comment: コメント
     attributes:
       patient:
         patient_name: 名前
+         image: 画像
         description: 説明
+        created_at: で作成
+        updated_at: で作成
       user:
         user_role: 役割
         name: 名前
@@ -15,3 +20,13 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+      category:
+        name: 名前
+        description: 説明
+        created_at: で作成
+        updated_at: で作成
+      comment:
+        content: コンテンツ
+        patient: 患者
+        created_at: で作成
+        updated_at: で作成
