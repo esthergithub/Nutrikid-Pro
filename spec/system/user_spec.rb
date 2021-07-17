@@ -4,12 +4,11 @@ describe 'Sign_up users function' do
     context 'When user create a patient' do
     it 'User Should Sign_up for patient crate page' do
     visit new_user_registration_path
-    fill_in 'Name', with:  'AlyneSano'
     fill_in 'Email', with:  'tess1@gmail.com'
     fill_in 'Password', with: 'password1'
     fill_in 'Password confirmation',  with: 'password1'
     click_button 'Sign up'
-    expect(page).to have_content 'Welcome! You have signed up successfully.'
+    expect(page).to have_content 'アカウント登録が完了しました。'
   end
 end
 end
@@ -26,13 +25,13 @@ describe 'Session functionality test' do
     end
     context 'to be able to login' do
       it 'enables login' do
-        expect(page).to have_content 'Signed in successfully'
+        expect(page).to have_content 'ログインしました。'
       end
     end
     context 'to be able to logout' do
       it 'enables logout' do
         click_on "Logout"
-        expect(page).to have_content 'Signed out successfully'
+        expect(page).to have_content 'ログアウトしました。'
       end
     end
   end
