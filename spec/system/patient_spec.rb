@@ -44,9 +44,7 @@ RSpec.feature "Patient management function", type: :feature do
   scenario 'Test Patient validation' do
     Patient.create(patient_name:'esther', description:'happiness comes', image:'estherwanjuli@gmail.com')
     visit patients_path
-    
-      
-      
+       
   end
   
   

@@ -34,10 +34,7 @@ RSpec.feature "Comment management function", type: :feature do
   end
   scenario 'Test Comment validation' do
     Comment.create(content:"hello world" )
-    visit patients_path
-    
-      
-      
+    visit patients_path    
   end
   
   
