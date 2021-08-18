@@ -42,8 +42,13 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'launchy'
 end
-
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
@@ -57,3 +62,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+<<<<<<< HEAD
+=======
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'rails_admin', '~> 2.1', '>= 2.1.1'
+gem 'letter_opener_web'
+gem 'rexml', '~> 3.2', '>= 3.2.4'
+gem 'rails_admin-i18n'
+>>>>>>> 6ba74f83e7ab7513547c522249f28a1ee7e94699
